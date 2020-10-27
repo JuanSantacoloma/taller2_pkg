@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+    
+
+    <!-- Minimal Kuboki -->
+    <!-- <include 
+        file="$(find kobuki_node)/launch/minimal.launch">
+    </include> -->
+    <!-- Gazebo empty world -->
+    <include file="$(find taller2_pkg)/launch/kuboki_mundo_taller2.launch" />
+    
+    <!-- Controller -->
+    roslaunch kobuki_controller_tutorial 
+    <include file="$(find kobuki_controller_tutorial)/launch/bump_blink_app.launch" />
+    
+
+    <!-- <node 
+        pkg="rqt_gui" 
+        type="rqt_gui" 
+        name="kobuki_dashboard"
+        args="-s kobuki_dashboard">
+    </node> -->
+      
+</launch>
